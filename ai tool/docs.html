@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI TOOL Documentation - Guides, API reference, and tutorials">
+    <title>AI TOOL Docs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/docs.css">
+</head>
+<body data-theme="light">
+    <header class="docs-topbar">
+        <a href="index.html" class="brand">AI TOOL Docs</a>
+        <nav class="top-links">
+            <a href="#getting-started">Getting Started</a>
+            <a href="#api-reference">API Reference</a>
+            <a href="#guides">Guides</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-section">
+                <h4>Documentation</h4>
+                <a href="#overview">Overview</a>
+                <a href="#getting-started">Getting Started</a>
+                <a href="#authentication">Authentication</a>
+                <a href="#errors">Errors</a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Reference</h4>
+                <a href="#api-reference">API Reference</a>
+                <a href="#webhooks">Webhooks</a>
+                <a href="#sdks">SDKs</a>
+            </div>
+        </aside>
+
+        <section class="docs-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Build with AI TOOL</h1>
+                    <p>Clean, reliable APIs and guides to help you ship faster with AI-driven workflows.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#getting-started">Get Started</a>
+                        <a class="btn-secondary" href="#api-reference">View API</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>AI TOOL provides a unified platform for AI automation, analytics, and intelligent assistants. Our documentation is structured for high readability and fast navigation.</p>
+                <div class="docs-grid">
+                    <div class="docs-card">
+                        <h3>Quick Setup</h3>
+                        <p>Connect your data sources, create a project, and run your first workflow in minutes.</p>
+                    </div>
+                    <div class="docs-card">
+                        <h3>Reliable APIs</h3>
+                        <p>Consistent endpoints with strong versioning, clear error handling, and predictable responses.</p>
+                    </div>
+                    <div class="docs-card">
+                        <h3>Secure by Design</h3>
+                        <p>Enterprise-grade security controls, audit logs, and configurable access policies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>Use your API key to authenticate and create your first AI job.</p>
+                <pre class="code-block"><code>curl https://api.aitool.com/v1/jobs \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"type":"summarize","input":"Your text"}'</code></pre>
+            </section>
+
+            <section id="api-reference">
+                <h2>API Reference</h2>
+                <p>Explore endpoints for AI jobs, datasets, and automations.</p>
+                <div class="docs-callout">
+                    <h3>POST /v1/jobs</h3>
+                    <p>Create a new AI job and track progress in real time.</p>
+                </div>
+            </section>
+
+            <section id="guides">
+                <h2>Guides</h2>
+                <p>Step-by-step tutorials for common workflows and integrations.</p>
+                <ul class="docs-list">
+                    <li>Build a summarization pipeline</li>
+                    <li>Automate customer support replies</li>
+                    <li>Generate analytics reports</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

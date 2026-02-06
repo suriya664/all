@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI TOOL Dashboard - Manage your AI tools and services">
+    <title>Dashboard - AI TOOL</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="dark-mode">
+    
+    <!-- Dashboard Layout (No Header/Footer) -->
+    <div class="dashboard-layout">
+        <!-- Sidebar Overlay for Mobile -->
+        <div class="dashboard-overlay" id="dashboardOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div style="margin-bottom: var(--spacing-lg);">
+                <a href="index.html" class="logo" style="font-size: 1.5rem; display: block; margin-bottom: var(--spacing-md);">AI TOOL</a>
+            </div>
+            
+            <nav style="list-style: none; padding: 0;">
+                <a href="dashboard.html" style="display: block; padding: var(--spacing-sm); color: var(--text-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-xs); background: var(--glass-bg); transition: all var(--transition-base);">
+                    📊 Dashboard
+                </a>
+                <a href="ai-tools.html" style="display: block; padding: var(--spacing-sm); color: var(--text-secondary); border-radius: var(--radius-md); margin-bottom: var(--spacing-xs); transition: all var(--transition-base);">
+                    🛠️ AI Tools
+                </a>
+                <a href="services.html" style="display: block; padding: var(--spacing-sm); color: var(--text-secondary); border-radius: var(--radius-md); margin-bottom: var(--spacing-xs); transition: all var(--transition-base);">
+                    🔧 Services
+                </a>
+                <a href="pricing.html" style="display: block; padding: var(--spacing-sm); color: var(--text-secondary); border-radius: var(--radius-md); margin-bottom: var(--spacing-xs); transition: all var(--transition-base);">
+                    💰 Pricing
+                </a>
+                <a href="contact.html" style="display: block; padding: var(--spacing-sm); color: var(--text-secondary); border-radius: var(--radius-md); margin-bottom: var(--spacing-xs); transition: all var(--transition-base);">
+                    📧 Support
+                </a>
+                <a href="index.html" style="display: block; padding: var(--spacing-sm); color: var(--text-secondary); border-radius: var(--radius-md); margin-top: var(--spacing-md); transition: all var(--transition-base);">
+                    🏠 Back to Home
+                </a>
+                <button class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-xs);" onclick="window.location.href='login.html'">
+                    Logout
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <button class="hamburger dashboard-mobile-toggle" id="mobileSidebarToggle" aria-label="Toggle sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="dashboard-header">
+                <h1 style="text-align: left; margin-bottom: var(--spacing-sm);">Dashboard</h1>
+                <p style="color: var(--text-secondary);">Welcome back! Here's an overview of your AI usage and activity.</p>
+            </div>
+
+            <!-- Top Stats -->
+            <div class="dashboard-stats">
+                <div class="dashboard-stat-card glass-card">
+                    <h4>API Calls Today</h4>
+                    <div class="stat-value">24,583</div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: var(--spacing-xs);">+12% from yesterday</p>
+                </div>
+                
+                <div class="dashboard-stat-card glass-card">
+                    <h4>Monthly Usage</h4>
+                    <div class="stat-value">687K</div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: var(--spacing-xs);">78% of 1M limit</p>
+                </div>
+                
+                <div class="dashboard-stat-card glass-card">
+                    <h4>Active Models</h4>
+                    <div class="stat-value">12</div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: var(--spacing-xs);">All systems operational</p>
+                </div>
+                
+                <div class="dashboard-stat-card glass-card">
+                    <h4>Response Time</h4>
+                    <div class="stat-value">142ms</div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: var(--spacing-xs);">Excellent performance</p>
+                </div>
+            </div>
+
+            <!-- Usage Cards -->
+            <div class="dashboard-usage-cards">
+                <div class="usage-card glass-card">
+                    <h4 style="text-align: left; margin-bottom: var(--spacing-md);">API Usage Trend</h4>
+                    <div class="chart-placeholder">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📈</div>
+                            <p>Usage chart visualization</p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted);">Interactive chart would appear here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="usage-card glass-card">
+                    <h4 style="text-align: left; margin-bottom: var(--spacing-md);">Model Performance</h4>
+                    <div class="chart-placeholder">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">⚡</div>
+                            <p>Performance metrics</p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted);">Performance chart would appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-table glass-card">
+                <h4 style="text-align: left; margin-bottom: var(--spacing-md);">Recent Activity</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Action</th>
+                            <th>Model</th>
+                            <th>Status</th>
+                            <th>Response Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 mins ago</td>
+                            <td>Text Analysis</td>
+                            <td>GPT-4</td>
+                            <td style="color: var(--accent-cyan);">✓ Success</td>
+                            <td>156ms</td>
+                        </tr>
+                        <tr>
+                            <td>5 mins ago</td>
+                            <td>Image Recognition</td>
+                            <td>Vision AI</td>
+                            <td style="color: var(--accent-cyan);">✓ Success</td>
+                            <td>203ms</td>
+                        </tr>
+                        <tr>
+                            <td>12 mins ago</td>
+                            <td>Data Processing</td>
+                            <td>ML Pipeline</td>
+                            <td style="color: var(--accent-cyan);">✓ Success</td>
+                            <td>89ms</td>
+                        </tr>
+                        <tr>
+                            <td>18 mins ago</td>
+                            <td>Natural Language</td>
+                            <td>GPT-4</td>
+                            <td style="color: var(--accent-cyan);">✓ Success</td>
+                            <td>134ms</td>
+                        </tr>
+                        <tr>
+                            <td>25 mins ago</td>
+                            <td>Predictive Analytics</td>
+                            <td>Forecast AI</td>
+                            <td style="color: var(--accent-cyan);">✓ Success</td>
+                            <td>278ms</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Quick Actions -->
+            <div style="margin-top: var(--spacing-md); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-sm);">
+                <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='ai-tools.html'">Explore AI Tools</button>
+                <button class="btn btn-outline" style="width: 100%;" onclick="window.location.href='pricing.html'">Upgrade Plan</button>
+                <button class="btn btn-secondary" style="width: 100%;" onclick="window.location.href='contact.html'">Get Support</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile sidebar toggle
+        const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+        const dashboardSidebar = document.querySelector('.dashboard-sidebar');
+        const dashboardOverlay = document.getElementById('dashboardOverlay');
+        const dashboardContent = document.querySelector('.dashboard-content');
+        
+        function toggleSidebar() {
+            if (window.innerWidth <= 768) {
+                const isActive = dashboardSidebar.classList.contains('active');
+                dashboardSidebar.classList.toggle('active');
+                if (dashboardOverlay) {
+                    dashboardOverlay.classList.toggle('active');
+                }
+                if (mobileSidebarToggle) {
+                    mobileSidebarToggle.classList.toggle('active');
+                }
+            }
+        }
+        
+        function closeSidebar() {
+            if (window.innerWidth <= 768) {
+                dashboardSidebar.classList.remove('active');
+                if (dashboardOverlay) {
+                    dashboardOverlay.classList.remove('active');
+                }
+                if (mobileSidebarToggle) {
+                    mobileSidebarToggle.classList.remove('active');
+                }
+            }
+        }
+        
+        function updateSidebarVisibility() {
+            if (window.innerWidth <= 768) {
+                // Mobile/Tablet: Show toggle button
+                if (mobileSidebarToggle) {
+                    mobileSidebarToggle.style.display = 'flex';
+                }
+            } else {
+                // Desktop: Hide toggle button and ensure sidebar is visible
+                if (mobileSidebarToggle) {
+                    mobileSidebarToggle.style.display = 'none';
+                }
+                closeSidebar();
+            }
+        }
+        
+        // Initial check
+        updateSidebarVisibility();
+        
+        // Toggle sidebar on button click
+        if (mobileSidebarToggle) {
+            mobileSidebarToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleSidebar();
+            });
+        }
+        
+        // Close sidebar when clicking overlay
+        if (dashboardOverlay) {
+            dashboardOverlay.addEventListener('click', function() {
+                closeSidebar();
+            });
+        }
+        
+        // Close sidebar when clicking on a link inside sidebar
+        if (dashboardSidebar) {
+            const sidebarLinks = dashboardSidebar.querySelectorAll('a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeSidebar();
+                });
+            });
+        }
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            updateSidebarVisibility();
+        });
+    </script>
+</body>
+</html>
